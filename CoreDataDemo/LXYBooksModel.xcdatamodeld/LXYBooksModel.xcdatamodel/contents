@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="LXYAuthor" representedClassName="LXYAuthor" syncable="YES">
+        <attribute name="authorDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LXYBook" inverseName="author" inverseEntity="LXYBook" syncable="YES"/>
+    </entity>
+    <entity name="LXYBook" representedClassName="LXYBook" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LXYAuthor" inverseName="books" inverseEntity="LXYAuthor" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LXYBook" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="LXYAuthor" positionX="-36" positionY="36" width="128" height="90"/>
+    </elements>
+</model>
